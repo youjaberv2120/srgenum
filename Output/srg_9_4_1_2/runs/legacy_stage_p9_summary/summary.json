@@ -1,0 +1,31 @@
+{
+  "tag": "stage_p9",
+  "params": [
+    9,
+    4,
+    1,
+    2
+  ],
+  "anchors": [
+    3,
+    4
+  ],
+  "stages": [
+    {
+      "anchor": 3,
+      "raw_models": 360,
+      "non_isomorphic": 1,
+      "valid_srgs": 1,
+      "seconds": 0.094
+    },
+    {
+      "anchor": 4,
+      "raw_models": 0,
+      "non_isomorphic": 0,
+      "valid_srgs": 0,
+      "seconds": 0.002
+    }
+  ],
+  "total_non_isomorphic": 1,
+  "output_g6": "Output/stage_p9_all.g6"
+}

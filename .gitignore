@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+
+# macOS / IDE noise
+.DS_Store
+.vscode/
+.idea/
+
+# Vendored SMS build artifacts (regenerate with build-and-install.sh)
+Vendor/sms/build/
+Vendor/sms/.git/
+
+# Live run scratch logs
+Output/_srg29_full.log

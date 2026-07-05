@@ -1,0 +1,46 @@
+{
+  "schema_version": 2,
+  "srg_id": "srg_15_6_1_3",
+  "params": [
+    15,
+    6,
+    1,
+    3
+  ],
+  "runs": {
+    "validate_15_6_1_3_smsg": {
+      "tag": "validate_15_6_1_3_smsg",
+      "engine": "smsg",
+      "run_dir": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_15_6_1_3/runs/validate_15_6_1_3_smsg",
+      "search_complete": true,
+      "valid_srgs": 1,
+      "seconds": 0.164,
+      "summary_json": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_15_6_1_3/runs/validate_15_6_1_3_smsg/summary.json"
+    },
+    "legacy_cm_15_6_1_3": {
+      "tag": "legacy_cm_15_6_1_3",
+      "engine": "smsg",
+      "run_dir": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_15_6_1_3/runs/legacy_cm_15_6_1_3",
+      "search_complete": true,
+      "valid_srgs": 1,
+      "summary_json": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_15_6_1_3/runs/legacy_cm_15_6_1_3/summary.json",
+      "type": "legacy"
+    },
+    "legacy_validate_15_6_1_3_smsg": {
+      "tag": "legacy_validate_15_6_1_3_smsg",
+      "engine": "smsg",
+      "run_dir": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_15_6_1_3/runs/legacy_validate_15_6_1_3_smsg",
+      "search_complete": true,
+      "valid_srgs": 1,
+      "summary_json": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_15_6_1_3/runs/legacy_validate_15_6_1_3_smsg/summary.json",
+      "type": "legacy"
+    }
+  },
+  "campaigns": {},
+  "graph_catalog": {
+    "g6_path": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_15_6_1_3/graphs/graphs.g6",
+    "jsonl_path": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_15_6_1_3/graphs/graphs.jsonl",
+    "total_graphs": 1
+  },
+  "updated_at": "2026-07-05T16:34:23.063171+00:00"
+}

@@ -1,0 +1,29 @@
+{
+  "params": [
+    37,
+    18,
+    8,
+    9
+  ],
+  "source_counts": {
+    "spence": 6760,
+    "maksimovic": 6,
+    "paley": 1
+  },
+  "source_distinct": {
+    "spence": 6760,
+    "maksimovic": 6,
+    "paley": 1
+  },
+  "union_distinct": 6766,
+  "new_beyond_spence": {
+    "maksimovic": 6
+  },
+  "switching_closure_size": 6802,
+  "two_graph_classes": 194,
+  "new_via_switching": 36,
+  "rank_buckets": {
+    "r2=36,r3=18": 6766
+  },
+  "build_seconds": 33.7
+}

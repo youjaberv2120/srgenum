@@ -1,0 +1,56 @@
+[00:42:53] encoding CNF for SRGSRGSpec(V=29, degree=14, lam=6, mu=7)
+[00:42:53] CNF: 340228 vars, 701916 clauses; partition=29
+[00:42:53] generating cubes (simple-assignment-cutoff=14)
+[00:42:53] 747 cubes
+[00:42:53] === NEW CAMPAIGN ===
+[00:42:53] resuming: 0/747 cubes already done; 747 to run on 8 workers
+[00:42:56] cube 30: done n_graphs=0 (25/747)
+[00:43:00] cube 56: done n_graphs=0 (50/747)
+[00:43:01] cube 72: done n_graphs=0 (75/747)
+[00:43:02] cube 104: done n_graphs=0 (100/747)
+[00:43:05] cube 130: done n_graphs=0 (125/747)
+[00:43:06] cube 153: done n_graphs=0 (150/747)
+[00:43:08] cube 180: done n_graphs=0 (175/747)
+[00:43:11] cube 205: done n_graphs=0 (200/747)
+[00:43:11] merge: 0 distinct graphs
+[00:43:12] cube 220: done n_graphs=0 (225/747)
+[00:43:13] cube 255: done n_graphs=0 (250/747)
+[00:43:15] cube 281: done n_graphs=0 (275/747)
+[00:44:30] cube 307: done n_graphs=0 (300/747)
+[00:46:40] cube 332: done n_graphs=0 (325/747)
+[00:56:30] === RESUME ===
+[00:56:30] resuming: 337/747 cubes already done; 410 to run on 8 workers
+[01:01:26] cube 357: done n_graphs=0 (350/747)
+[01:01:33] cube 382: done n_graphs=0 (375/747)
+[01:02:59] cube 362: done n_graphs=0 (400/747)
+[01:06:33] cube 430: done n_graphs=0 (425/747)
+[01:06:35] cube 456: done n_graphs=0 (450/747)
+[01:06:38] cube 481: done n_graphs=0 (475/747)
+[01:06:41] cube 505: done n_graphs=0 (500/747)
+[01:06:43] cube 526: done n_graphs=0 (525/747)
+[01:06:43] merge: 6 distinct graphs
+[01:06:45] cube 556: done n_graphs=0 (550/747)
+[01:06:46] cube 581: done n_graphs=0 (575/747)
+[01:06:48] cube 605: done n_graphs=0 (600/747)
+[01:06:50] cube 630: done n_graphs=0 (625/747)
+[01:06:51] cube 655: done n_graphs=0 (650/747)
+[01:11:29] cube 682: done n_graphs=0 (675/747)
+[01:11:54] cube 707: done n_graphs=0 (700/747)
+[01:14:45] cube 732: done n_graphs=0 (725/747)
+[01:16:33] merge: 18 distinct graphs
+[01:20:05] merge: 18 distinct graphs
+[01:20:05] === SUMMARY ===
+{
+  "params": [
+    29,
+    14,
+    6,
+    7
+  ],
+  "n_cubes": 747,
+  "cube_status": {
+    "done": 747
+  },
+  "search_complete": true,
+  "distinct_graphs": 18
+}

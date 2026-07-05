@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "srg_id": "srg_25_12_5_6",
+  "params": [
+    25,
+    12,
+    5,
+    6
+  ],
+  "runs": {
+    "legacy_cm_25_12_5_6": {
+      "tag": "legacy_cm_25_12_5_6",
+      "engine": "smsg",
+      "run_dir": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_25_12_5_6/runs/legacy_cm_25_12_5_6",
+      "search_complete": true,
+      "valid_srgs": 15,
+      "summary_json": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_25_12_5_6/runs/legacy_cm_25_12_5_6/summary.json",
+      "type": "legacy"
+    }
+  },
+  "campaigns": {},
+  "graph_catalog": {
+    "g6_path": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_25_12_5_6/graphs/graphs.g6",
+    "jsonl_path": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_25_12_5_6/graphs/graphs.jsonl",
+    "total_graphs": 15
+  },
+  "updated_at": "2026-07-05T16:34:23.048855+00:00"
+}

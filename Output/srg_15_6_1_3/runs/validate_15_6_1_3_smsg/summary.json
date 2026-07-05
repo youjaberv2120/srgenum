@@ -1,0 +1,52 @@
+{
+  "schema_version": 2,
+  "srg_id": "srg_15_6_1_3",
+  "tag": "validate_15_6_1_3_smsg",
+  "engine": "smsg",
+  "params": [
+    15,
+    6,
+    1,
+    3
+  ],
+  "started_at": "2026-07-05T16:21:20.169608+00:00",
+  "finished_at": "2026-07-05T16:21:20.333855+00:00",
+  "encode": {
+    "vertices": 15,
+    "edge_vars": 105,
+    "total_vars": 36960,
+    "clauses": 77565,
+    "initial_partition": "15"
+  },
+  "raw_models": 1,
+  "backend_reported_models": 1,
+  "non_isomorphic": 1,
+  "valid_srgs": 1,
+  "seconds": 0.164,
+  "search_complete": true,
+  "limiting_reason": [],
+  "backend": {
+    "requested": "smsg",
+    "selected": "smsg",
+    "completed": true,
+    "timed_out": false
+  },
+  "constraints": {
+    "fix_clique": 0,
+    "forbid_clique": null,
+    "forbid_independent": null,
+    "limit": null,
+    "timeout": 60
+  },
+  "artifacts": {
+    "run_dir": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_15_6_1_3/runs/validate_15_6_1_3_smsg",
+    "graphs_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_15_6_1_3/runs/validate_15_6_1_3_smsg/graphs.g6",
+    "graphs_jsonl": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_15_6_1_3/runs/validate_15_6_1_3_smsg/graphs.jsonl",
+    "formula_cnf": null,
+    "catalog_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_15_6_1_3/graphs/graphs.g6",
+    "catalog_jsonl": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_15_6_1_3/graphs/graphs.jsonl",
+    "summary_json": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_15_6_1_3/runs/validate_15_6_1_3_smsg/summary.json"
+  },
+  "output_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_15_6_1_3/runs/validate_15_6_1_3_smsg/graphs.g6",
+  "output_jsonl": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_15_6_1_3/runs/validate_15_6_1_3_smsg/graphs.jsonl"
+}

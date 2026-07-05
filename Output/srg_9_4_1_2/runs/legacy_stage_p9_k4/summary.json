@@ -1,0 +1,44 @@
+{
+  "schema_version": 2,
+  "tag": "legacy_stage_p9_k4",
+  "source_basename": "stage_p9_k4",
+  "params": [
+    9,
+    4,
+    1,
+    2
+  ],
+  "migrated_at": "2026-07-05T16:34:23.056988+00:00",
+  "valid_srgs": 0,
+  "search_complete": true,
+  "artifacts": {
+    "run_dir": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_9_4_1_2/runs/legacy_stage_p9_k4",
+    "graphs_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_9_4_1_2/runs/legacy_stage_p9_k4/graphs.g6",
+    "graphs_jsonl": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_9_4_1_2/runs/legacy_stage_p9_k4/graphs.jsonl",
+    "catalog_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_9_4_1_2/graphs/graphs.g6",
+    "catalog_jsonl": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_9_4_1_2/graphs/graphs.jsonl",
+    "summary_json": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_9_4_1_2/runs/legacy_stage_p9_k4/summary.json"
+  },
+  "original_summary": {
+    "tag": "stage_p9_k4",
+    "engine": "pysat+cadical",
+    "params": [
+      9,
+      4,
+      1,
+      2
+    ],
+    "encode": {
+      "vertices": 9,
+      "edge_vars": 36,
+      "total_vars": 2808,
+      "clauses": 6282,
+      "initial_partition": "1 1 1 1 5"
+    },
+    "raw_models": 0,
+    "non_isomorphic": 0,
+    "valid_srgs": 0,
+    "seconds": 0.002,
+    "output_g6": "Output/stage_p9_k4.g6"
+  }
+}

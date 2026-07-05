@@ -1,0 +1,83 @@
+[01:29:36] encoding CNF for SRGSRGSpec(V=29, degree=14, lam=6, mu=7)
+[01:29:36] CNF: 340228 vars, 701916 clauses; partition=29
+[01:29:36] generating cubes (simple-assignment-cutoff=24)
+[01:29:37] 1206 cubes
+[01:29:37] === NEW CAMPAIGN ===
+[01:29:37] resuming: 0/1206 cubes already done; 1206 to run on 8 workers
+[01:29:40] cube 29: done n_graphs=0 (25/1206)
+[01:29:42] cube 52: done n_graphs=0 (50/1206)
+[01:29:44] cube 74: done n_graphs=0 (75/1206)
+[01:29:46] cube 103: done n_graphs=0 (100/1206)
+[01:29:48] cube 130: done n_graphs=0 (125/1206)
+[01:29:50] cube 151: done n_graphs=0 (150/1206)
+[01:29:51] cube 176: done n_graphs=0 (175/1206)
+[01:29:52] cube 201: done n_graphs=0 (200/1206)
+[01:29:52] merge: 0 distinct graphs
+[01:29:52] cube 226: done n_graphs=0 (225/1206)
+[01:29:53] cube 250: done n_graphs=0 (250/1206)
+[01:29:53] cube 275: done n_graphs=0 (275/1206)
+[01:29:54] cube 300: done n_graphs=0 (300/1206)
+[01:29:54] cube 325: done n_graphs=0 (325/1206)
+[01:29:54] cube 350: done n_graphs=0 (350/1206)
+[01:29:55] cube 375: done n_graphs=0 (375/1206)
+[01:29:55] cube 400: done n_graphs=0 (400/1206)
+[01:29:55] merge: 0 distinct graphs
+[01:29:56] cube 425: done n_graphs=0 (425/1206)
+[01:29:56] cube 450: done n_graphs=0 (450/1206)
+[01:29:56] cube 475: done n_graphs=0 (475/1206)
+[01:29:57] cube 500: done n_graphs=0 (500/1206)
+[01:29:57] cube 525: done n_graphs=0 (525/1206)
+[01:29:58] cube 550: done n_graphs=0 (550/1206)
+[01:29:58] cube 575: done n_graphs=0 (575/1206)
+[01:29:58] cube 600: done n_graphs=0 (600/1206)
+[01:29:58] merge: 0 distinct graphs
+[01:29:59] cube 625: done n_graphs=0 (625/1206)
+[01:29:59] cube 650: done n_graphs=0 (650/1206)
+[01:30:00] cube 675: done n_graphs=0 (675/1206)
+[01:30:00] cube 700: done n_graphs=0 (700/1206)
+[01:30:00] cube 725: done n_graphs=0 (725/1206)
+[01:30:01] cube 750: done n_graphs=0 (750/1206)
+[01:30:01] cube 775: done n_graphs=0 (775/1206)
+[01:30:02] cube 800: done n_graphs=0 (800/1206)
+[01:30:02] merge: 0 distinct graphs
+[01:30:02] cube 825: done n_graphs=0 (825/1206)
+[01:30:02] cube 850: done n_graphs=0 (850/1206)
+[01:30:03] cube 875: done n_graphs=0 (875/1206)
+[01:30:03] cube 900: done n_graphs=0 (900/1206)
+[01:30:03] cube 926: done n_graphs=0 (925/1206)
+[01:30:04] cube 951: done n_graphs=0 (950/1206)
+[01:30:04] cube 976: done n_graphs=0 (975/1206)
+[01:30:05] cube 1001: done n_graphs=0 (1000/1206)
+[01:30:05] merge: 0 distinct graphs
+[01:30:05] cube 1026: done n_graphs=0 (1025/1206)
+[01:30:06] cube 1050: done n_graphs=0 (1050/1206)
+[01:30:06] cube 1076: done n_graphs=0 (1075/1206)
+[01:30:07] cube 1102: done n_graphs=0 (1100/1206)
+[01:30:07] cube 1129: done n_graphs=0 (1125/1206)
+[01:30:08] cube 1154: done n_graphs=0 (1150/1206)
+[01:30:09] cube 1179: done n_graphs=0 (1175/1206)
+[01:30:11] cube 1206: done n_graphs=0 (1200/1206)
+[01:30:11] merge: 0 distinct graphs
+[01:40:04] cube 960: timeout n_graphs=0 (1201/1206)
+[01:40:06] cube 1081: timeout n_graphs=0 (1202/1206)
+[01:40:07] cube 1115: timeout n_graphs=0 (1203/1206)
+[01:40:08] cube 1158: timeout n_graphs=0 (1204/1206)
+[01:40:09] cube 1180: timeout n_graphs=0 (1205/1206)
+[01:40:09] cube 1181: timeout n_graphs=0 (1206/1206)
+[01:40:09] merge: 0 distinct graphs
+[01:40:09] === SUMMARY ===
+{
+  "params": [
+    29,
+    14,
+    6,
+    7
+  ],
+  "n_cubes": 1206,
+  "cube_status": {
+    "done": 1200,
+    "timeout": 6
+  },
+  "search_complete": false,
+  "distinct_graphs": 0
+}

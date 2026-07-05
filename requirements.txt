@@ -1,0 +1,21 @@
+# Python dependencies for the SRG(37,18,8,9) enumeration pipeline.
+#
+# python-sat bundles CaDiCaL (pysat.solvers.Cadical195) which is used as the
+# in-process ALL-SAT engine (blocking-clause enumeration projected onto edge
+# variables).
+python-sat>=1.8.dev0
+
+# Test runner.
+pytest>=8.0
+
+# --- External (non-pip) tools expected on PATH ---------------------------
+# nauty        : canonical labelling / isomorph rejection (labelg, shortg).
+#                macOS:  brew install nauty
+#                linux:  apt-get install nauty
+# cadical      : standalone CaDiCaL binary (optional, alternative backend).
+#                macOS:  brew install cadical
+# smsg (SMS)   : SAT Modulo Symmetries solver, isomorph-free enumeration with
+#                dynamic symmetry breaking (optional, preferred backend).
+#                Build from https://github.com/markirch/sat-modulo-symmetries
+#                (Vendor/sms/build-and-install.sh -l). Installs the importable
+#                module `pysms` and the `smsg` binary into ~/.local.

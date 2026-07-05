@@ -1,0 +1,19 @@
+{
+ "params": [
+  29,
+  14,
+  6,
+  7
+ ],
+ "initial_partition": "29",
+ "cube_cutoff": 14,
+ "cube_timeout": 300,
+ "encoder_opts": {},
+ "known_db": null,
+ "n_cubes": 747,
+ "campaign_tag": "rehearsal29",
+ "srg_id": "srg_29_14_6_7",
+ "campaign_dir": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_29_14_6_7/campaigns/rehearsal29",
+ "output_root": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output",
+ "schema_version": 2
+}

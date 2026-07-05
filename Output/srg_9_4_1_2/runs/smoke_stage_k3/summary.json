@@ -1,0 +1,54 @@
+{
+  "schema_version": 2,
+  "srg_id": "srg_9_4_1_2",
+  "tag": "smoke_stage_k3",
+  "engine": "pysat+cadical",
+  "params": [
+    9,
+    4,
+    1,
+    2
+  ],
+  "started_at": "2026-07-05T16:20:48.997882+00:00",
+  "finished_at": "2026-07-05T16:20:49.014133+00:00",
+  "encode": {
+    "vertices": 9,
+    "edge_vars": 36,
+    "total_vars": 2808,
+    "clauses": 6279,
+    "initial_partition": "1 1 1 6"
+  },
+  "raw_models": 1,
+  "backend_reported_models": 1,
+  "non_isomorphic": 1,
+  "valid_srgs": 1,
+  "seconds": 0.016,
+  "search_complete": false,
+  "limiting_reason": [
+    "limit"
+  ],
+  "backend": {
+    "requested": "pysat",
+    "selected": "pysat+cadical",
+    "completed": false,
+    "timed_out": false
+  },
+  "constraints": {
+    "fix_clique": 3,
+    "forbid_clique": 3,
+    "forbid_independent": 5,
+    "limit": 1,
+    "timeout": null
+  },
+  "artifacts": {
+    "run_dir": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_9_4_1_2/runs/smoke_stage_k3",
+    "graphs_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_9_4_1_2/runs/smoke_stage_k3/graphs.g6",
+    "graphs_jsonl": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_9_4_1_2/runs/smoke_stage_k3/graphs.jsonl",
+    "formula_cnf": null,
+    "catalog_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_9_4_1_2/graphs/graphs.g6",
+    "catalog_jsonl": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_9_4_1_2/graphs/graphs.jsonl",
+    "summary_json": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_9_4_1_2/runs/smoke_stage_k3/summary.json"
+  },
+  "output_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_9_4_1_2/runs/smoke_stage_k3/graphs.g6",
+  "output_jsonl": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_9_4_1_2/runs/smoke_stage_k3/graphs.jsonl"
+}

@@ -1,0 +1,96 @@
+{
+  "rows": [
+    {
+      "id": "P1",
+      "name": "clique number omega <= 5",
+      "status": "CONFIRMED (param)",
+      "detail": "CAB=5 beats Delsarte=6; C(2,6)=-6<0. P(37) has omega=4. Folded in as forbid_clique=5."
+    },
+    {
+      "id": "P2",
+      "name": "coclique number alpha <= 5",
+      "status": "CONFIRMED (param)",
+      "detail": "complement has same parameters (self-complementary); CAB=5 => alpha<=5. P(37) has alpha=4. Folded in as forbid_independent=5."
+    },
+    {
+      "id": "P3",
+      "name": "every edge in exactly 8 triangles (lambda)",
+      "status": "CONFIRMED (graph)",
+      "detail": "triangles-per-edge range on P(37) = (8, 8) (== lambda). Enforced by the common-neighbour cardinality constraint."
+    },
+    {
+      "id": "P4",
+      "name": "neighbourhood is 8-regular on 18 vertices",
+      "status": "CONFIRMED (graph)",
+      "detail": "P(37): neighbourhood sizes=(18,), local degrees=(8,). Seeds the staged neighbourhood fixing."
+    },
+    {
+      "id": "P5",
+      "name": "each non-adjacent pair has mu=9 common neighbours (V-forms)",
+      "status": "CONFIRMED (graph)",
+      "detail": "subsumed by the SRG verification; drives the mu side of the conference identity (#common + [i~j] == 9)."
+    },
+    {
+      "id": "P6",
+      "name": "A^2 = kI + lambda A + mu(J-I-A)",
+      "status": "CONFIRMED (graph)",
+      "detail": "identity holds on P(37): True. Basis of the single unified per-pair cardinality constraint used by the encoder."
+    },
+    {
+      "id": "P7",
+      "name": "p-rank invariants (2-rank, 3-rank)",
+      "status": "CONFIRMED (graph)",
+      "detail": "P(37): 2-rank=36, 3-rank=18 (3-rank=18 is the classic conference invariant). Usable as a cheap fingerprint / parallel partition."
+    },
+    {
+      "id": "P8",
+      "name": "automorphism orders in {1,2,3,9,18,666}; <=20 fixed points",
+      "status": "LITERATURE",
+      "detail": "Crnkovic-Maksimovic (2020): exactly 40 non-rigid SRG(37,18,8,9); 6726 rigid. P(37) is the unique one with |Aut|=666. Justifies pure vertex-relabel isomorph rejection for the rigid bulk."
+    },
+    {
+      "id": "P9",
+      "name": "switching class / regular two-graph on 38 vertices",
+      "status": "LITERATURE",
+      "detail": "the 6760 known graphs are descendants of 191 regular two-graphs on 38 vertices (McKay-Spence). Alternative decomposition + completeness cross-check."
+    },
+    {
+      "id": "P10",
+      "name": "parameters are self-complementary",
+      "status": "CONFIRMED (graph)",
+      "detail": "complement of P(37) is SRG(37,18,8,9): True. Any non-complementation-symmetric invariant halves work / checks."
+    },
+    {
+      "id": "P11",
+      "name": "SMS lexicographic canonical form + nauty filter is isomorph-free",
+      "status": "METHOD",
+      "detail": "validated: C5/Paley(9)/Petersen enumerations reduce to the correct unique counts via nauty dedup."
+    },
+    {
+      "id": "P12",
+      "name": "canonical max-clique anchor makes staging disjoint",
+      "status": "METHOD",
+      "detail": "stage.py partitions by omega in {3,4,5} with a fixed K_t anchor; validated on Paley(9)."
+    }
+  ],
+  "metrics": {
+    "clique_adjacency_bound": 5,
+    "delsarte_bound": 6,
+    "paley37_omega": 4,
+    "paley37_alpha": 4,
+    "paley37_triangles_per_edge": [
+      8,
+      8
+    ],
+    "paley37_neighbourhood_sizes": [
+      18
+    ],
+    "paley37_local_degrees": [
+      8
+    ],
+    "paley37_adjacency_identity": true,
+    "paley37_2_rank": 36,
+    "paley37_3_rank": 18,
+    "complement_is_srg": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+ "schema_version": 2,
+ "srg_id": "srg_5_2_0_1",
+ "campaign_tag": "smoke_campaign",
+ "params": [
+  5,
+  2,
+  0,
+  1
+ ],
+ "initial_partition": "5",
+ "cube_cutoff": 4,
+ "cube_timeout": 30,
+ "encoder_opts": {},
+ "known_db": null,
+ "n_cubes": 8,
+ "output_root": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output",
+ "campaign_dir": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_5_2_0_1/campaigns/smoke_campaign",
+ "created_at": "2026-07-05T16:20:55.232347+00:00"
+}

@@ -1,0 +1,62 @@
+{
+ "cubes": {
+  "1": {
+   "status": "done",
+   "n_graphs": 1,
+   "distinct": 1,
+   "seconds": 0.012,
+   "finished_at": "2026-07-05T16:20:55.245309+00:00"
+  },
+  "2": {
+   "status": "done",
+   "n_graphs": 0,
+   "distinct": 0,
+   "seconds": 0.004,
+   "finished_at": "2026-07-05T16:20:55.249179+00:00"
+  },
+  "3": {
+   "status": "done",
+   "n_graphs": 0,
+   "distinct": 0,
+   "seconds": 0.004,
+   "finished_at": "2026-07-05T16:20:55.252854+00:00"
+  },
+  "4": {
+   "status": "done",
+   "n_graphs": 0,
+   "distinct": 0,
+   "seconds": 0.003,
+   "finished_at": "2026-07-05T16:20:55.256308+00:00"
+  },
+  "5": {
+   "status": "done",
+   "n_graphs": 0,
+   "distinct": 0,
+   "seconds": 0.004,
+   "finished_at": "2026-07-05T16:20:55.260096+00:00"
+  },
+  "6": {
+   "status": "done",
+   "n_graphs": 0,
+   "distinct": 0,
+   "seconds": 0.004,
+   "finished_at": "2026-07-05T16:20:55.263774+00:00"
+  },
+  "7": {
+   "status": "done",
+   "n_graphs": 0,
+   "distinct": 0,
+   "seconds": 0.004,
+   "finished_at": "2026-07-05T16:20:55.267524+00:00"
+  },
+  "8": {
+   "status": "done",
+   "n_graphs": 0,
+   "distinct": 0,
+   "seconds": 0.004,
+   "finished_at": "2026-07-05T16:20:55.271490+00:00"
+  }
+ },
+ "started": 1783268455.232664,
+ "started_at": "2026-07-05T16:20:55.232665+00:00"
+}

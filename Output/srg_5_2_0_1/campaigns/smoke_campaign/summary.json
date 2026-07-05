@@ -1,0 +1,32 @@
+{
+  "schema_version": 2,
+  "tag": "smoke_campaign",
+  "srg_id": "srg_5_2_0_1",
+  "params": [
+    5,
+    2,
+    0,
+    1
+  ],
+  "campaign_dir": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_5_2_0_1/campaigns/smoke_campaign",
+  "started_at": "2026-07-05T16:20:55.232665+00:00",
+  "finished_at": "2026-07-05T16:22:35.365915+00:00",
+  "seconds": 100.133,
+  "n_cubes": 8,
+  "cube_status": {
+    "done": 8
+  },
+  "search_complete": true,
+  "raw_models": 1,
+  "distinct_graphs": 1,
+  "artifacts": {
+    "summary_json": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_5_2_0_1/campaigns/smoke_campaign/summary.json",
+    "canonical_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_5_2_0_1/campaigns/smoke_campaign/canonical.g6",
+    "canonical_jsonl": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_5_2_0_1/campaigns/smoke_campaign/canonical.jsonl",
+    "new_candidates_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_5_2_0_1/campaigns/smoke_campaign/new_candidates.g6",
+    "state_json": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_5_2_0_1/campaigns/smoke_campaign/state.json",
+    "config_json": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_5_2_0_1/campaigns/smoke_campaign/config.json",
+    "cubes_txt": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_5_2_0_1/campaigns/smoke_campaign/cubes.txt",
+    "formula_cnf": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_5_2_0_1/campaigns/smoke_campaign/formula.cnf"
+  }
+}

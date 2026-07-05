@@ -1,0 +1,35 @@
+{
+  "schema_version": 2,
+  "srg_id": "srg_29_14_6_7",
+  "params": [
+    29,
+    14,
+    6,
+    7
+  ],
+  "runs": {},
+  "campaigns": {
+    "rehearsal29": {
+      "tag": "rehearsal29",
+      "campaign_dir": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_29_14_6_7/campaigns/rehearsal29",
+      "search_complete": true,
+      "distinct_graphs": 18,
+      "summary_json": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_29_14_6_7/campaigns/rehearsal29/summary.json",
+      "type": "legacy_campaign"
+    },
+    "rehearsal29b": {
+      "tag": "rehearsal29b",
+      "campaign_dir": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_29_14_6_7/campaigns/rehearsal29b",
+      "search_complete": false,
+      "distinct_graphs": 0,
+      "summary_json": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_29_14_6_7/campaigns/rehearsal29b/summary.json",
+      "type": "legacy_campaign"
+    }
+  },
+  "graph_catalog": {
+    "g6_path": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_29_14_6_7/graphs/graphs.g6",
+    "jsonl_path": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_29_14_6_7/graphs/graphs.jsonl",
+    "total_graphs": 18
+  },
+  "updated_at": "2026-07-05T16:34:23.080237+00:00"
+}

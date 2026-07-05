@@ -1,0 +1,28 @@
+{
+  "params": [
+    29,
+    14,
+    6,
+    7
+  ],
+  "n_cubes": 747,
+  "cube_status": {
+    "done": 747
+  },
+  "search_complete": true,
+  "distinct_graphs": 18,
+  "schema_version": 2,
+  "tag": "rehearsal29",
+  "srg_id": "srg_29_14_6_7",
+  "campaign_dir": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_29_14_6_7/campaigns/rehearsal29",
+  "migrated_at": "2026-07-05T16:34:23.078408+00:00",
+  "artifacts": {
+    "summary_json": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_29_14_6_7/campaigns/rehearsal29/summary.json",
+    "canonical_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_29_14_6_7/campaigns/rehearsal29/canonical.g6",
+    "canonical_jsonl": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_29_14_6_7/campaigns/rehearsal29/canonical.jsonl",
+    "state_json": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_29_14_6_7/campaigns/rehearsal29/state.json",
+    "config_json": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_29_14_6_7/campaigns/rehearsal29/config.json",
+    "cubes_txt": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_29_14_6_7/campaigns/rehearsal29/cubes.txt",
+    "formula_cnf": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_29_14_6_7/campaigns/rehearsal29/formula.cnf"
+  }
+}

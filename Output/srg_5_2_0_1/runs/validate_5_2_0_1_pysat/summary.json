@@ -1,0 +1,52 @@
+{
+  "schema_version": 2,
+  "srg_id": "srg_5_2_0_1",
+  "tag": "validate_5_2_0_1_pysat",
+  "engine": "pysat+cadical",
+  "params": [
+    5,
+    2,
+    0,
+    1
+  ],
+  "started_at": "2026-07-05T16:21:12.383104+00:00",
+  "finished_at": "2026-07-05T16:21:12.397468+00:00",
+  "encode": {
+    "vertices": 5,
+    "edge_vars": 10,
+    "total_vars": 220,
+    "clauses": 480,
+    "initial_partition": "5"
+  },
+  "raw_models": 12,
+  "backend_reported_models": 12,
+  "non_isomorphic": 1,
+  "valid_srgs": 1,
+  "seconds": 0.014,
+  "search_complete": true,
+  "limiting_reason": [],
+  "backend": {
+    "requested": "pysat",
+    "selected": "pysat+cadical",
+    "completed": true,
+    "timed_out": false
+  },
+  "constraints": {
+    "fix_clique": 0,
+    "forbid_clique": null,
+    "forbid_independent": null,
+    "limit": null,
+    "timeout": null
+  },
+  "artifacts": {
+    "run_dir": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_5_2_0_1/runs/validate_5_2_0_1_pysat",
+    "graphs_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_5_2_0_1/runs/validate_5_2_0_1_pysat/graphs.g6",
+    "graphs_jsonl": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_5_2_0_1/runs/validate_5_2_0_1_pysat/graphs.jsonl",
+    "formula_cnf": null,
+    "catalog_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_5_2_0_1/graphs/graphs.g6",
+    "catalog_jsonl": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_5_2_0_1/graphs/graphs.jsonl",
+    "summary_json": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_5_2_0_1/runs/validate_5_2_0_1_pysat/summary.json"
+  },
+  "output_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_5_2_0_1/runs/validate_5_2_0_1_pysat/graphs.g6",
+  "output_jsonl": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_5_2_0_1/runs/validate_5_2_0_1_pysat/graphs.jsonl"
+}
