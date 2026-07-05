@@ -153,6 +153,8 @@ def run_smsg(
     cube_timeout: Optional[float] = None,
     collect: bool = True,
     extra_args: Optional[Sequence[str]] = None,
+    progress: bool = False,
+    progress_interval: float = 10.0,
 ) -> dict:
     """Run ``smsg`` (optionally on a single cube) and stream-parse the output.
 
@@ -184,12 +186,30 @@ def run_smsg(
         cmd += list(extra_args)
 
     import threading
+    import time
 
     matrices: List[List[List[int]]] = []
     n_graphs = None
     saw_end = False
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE,
                             stderr=subprocess.DEVNULL, text=True)
+
+    started = time.time()
+    parsed_graphs = {"count": 0}
+
+    def _elapsed_hms() -> str:
+        elapsed = int(time.time() - started)
+        hours, rem = divmod(elapsed, 3600)
+        mins, secs = divmod(rem, 60)
+        return f"{hours:02d}:{mins:02d}:{secs:02d}"
+
+    def _emit_progress(final: bool = False):
+        state = "done" if final else "running"
+        print(
+            f"[live] status={state} elapsed={_elapsed_hms()} "
+            f"graphs_found={parsed_graphs['count']}",
+            flush=True,
+        )
 
     timed_out = {"flag": False}
 
@@ -203,9 +223,28 @@ def run_smsg(
         watchdog.daemon = True
         watchdog.start()
 
+    progress_stop = threading.Event()
+    progress_thread = None
+    if progress:
+        progress_interval = max(1.0, float(progress_interval))
+        print(
+            f"[live] smsg started interval={progress_interval:.1f}s",
+            flush=True,
+        )
+
+        def _ticker():
+            while not progress_stop.wait(progress_interval):
+                _emit_progress()
+
+        progress_thread = threading.Thread(target=_ticker, daemon=True)
+        progress_thread.start()
+
     try:
         for line in proc.stdout:
             if _EDGE_LINE.match(line):
+                parsed_graphs["count"] += 1
+                if progress:
+                    _emit_progress()
                 if collect:
                     m = _parse_graph_line(line, n)
                     if m is not None:
@@ -219,6 +258,9 @@ def run_smsg(
             elif _END_LINE.search(line):
                 saw_end = True
     finally:
+        progress_stop.set()
+        if progress_thread is not None:
+            progress_thread.join(timeout=1.0)
         if watchdog is not None:
             watchdog.cancel()
         if proc.poll() is None:
@@ -233,10 +275,19 @@ def run_smsg(
     # abandoned mid-search (watchdog, or smsg's own --cube-timeout) does NOT
     # print that line, so it is correctly reported as incomplete.
     reached_limit = limit is not None and len(matrices) >= limit
+    completed = (saw_end or reached_limit) and not timed_out["flag"]
+    if progress:
+        backend_reported = n_graphs if n_graphs is not None else "n/a"
+        print(
+            f"[live] status=done elapsed={_elapsed_hms()} "
+            f"graphs_found={parsed_graphs['count']} backend_reported={backend_reported} "
+            f"completed={completed} timed_out={timed_out['flag']}",
+            flush=True,
+        )
     return {
         "matrices": matrices,
         "n_graphs": n_graphs,
-        "completed": (saw_end or reached_limit) and not timed_out["flag"],
+        "completed": completed,
         "timed_out": timed_out["flag"],
     }
 

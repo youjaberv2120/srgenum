@@ -1,0 +1,52 @@
+{
+  "schema_version": 2,
+  "srg_id": "srg_29_14_6_7",
+  "tag": "full_smsg",
+  "engine": "smsg",
+  "params": [
+    29,
+    14,
+    6,
+    7
+  ],
+  "started_at": "2026-07-05T18:13:07.177579+00:00",
+  "finished_at": "2026-07-05T20:49:44.665027+00:00",
+  "encode": {
+    "vertices": 29,
+    "edge_vars": 406,
+    "total_vars": 340228,
+    "clauses": 701916,
+    "initial_partition": "29"
+  },
+  "raw_models": 41,
+  "backend_reported_models": 41,
+  "non_isomorphic": 41,
+  "valid_srgs": 41,
+  "seconds": 9397.487,
+  "search_complete": true,
+  "limiting_reason": [],
+  "backend": {
+    "requested": "smsg",
+    "selected": "smsg",
+    "completed": true,
+    "timed_out": false
+  },
+  "constraints": {
+    "fix_clique": 0,
+    "forbid_clique": null,
+    "forbid_independent": null,
+    "limit": null,
+    "timeout": null
+  },
+  "artifacts": {
+    "run_dir": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/srgenum/Output/srg_29_14_6_7/runs/full_smsg",
+    "graphs_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/srgenum/Output/srg_29_14_6_7/runs/full_smsg/graphs.g6",
+    "graphs_jsonl": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/srgenum/Output/srg_29_14_6_7/runs/full_smsg/graphs.jsonl",
+    "formula_cnf": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/srgenum/Output/srg_29_14_6_7/runs/full_smsg/formula.cnf",
+    "catalog_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/srgenum/Output/srg_29_14_6_7/graphs/graphs.g6",
+    "catalog_jsonl": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/srgenum/Output/srg_29_14_6_7/graphs/graphs.jsonl",
+    "summary_json": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/srgenum/Output/srg_29_14_6_7/runs/full_smsg/summary.json"
+  },
+  "output_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/srgenum/Output/srg_29_14_6_7/runs/full_smsg/graphs.g6",
+  "output_jsonl": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/srgenum/Output/srg_29_14_6_7/runs/full_smsg/graphs.jsonl"
+}

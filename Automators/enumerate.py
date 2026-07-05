@@ -72,6 +72,8 @@ def run_enumeration(
     frequency: int = 20,
     cutoff: int = 20000,
     keep_cnf: bool = False,
+    live_progress: bool = False,
+    progress_interval: float = 10.0,
 ):
     output_root = resolve_output_root(_ROOT, out_dir)
     out_dir = run_dir(spec, output_root, tag)
@@ -104,6 +106,8 @@ def run_enumeration(
                 dimacs, spec.V,
                 initial_partition=meta["initial_partition"],
                 frequency=frequency, cutoff=cutoff, limit=limit, timeout=timeout,
+                progress=live_progress,
+                progress_interval=progress_interval,
             )
             raw = raw_result["matrices"]
         finally:
@@ -231,6 +235,10 @@ def main():
     ap.add_argument("--cutoff", type=int, default=20000)
     ap.add_argument("--keep-cnf", action="store_true",
                     help="keep the generated DIMACS file (smsg backend)")
+    ap.add_argument("--live-progress", action="store_true",
+                    help="print elapsed timer + graph count while smsg runs")
+    ap.add_argument("--progress-interval", type=float, default=10.0,
+                    help="seconds between live timer updates")
     args = ap.parse_args()
 
     spec = SRGSpec(args.v, args.k, args.lam, args.mu)
@@ -249,6 +257,8 @@ def main():
         frequency=args.frequency,
         cutoff=args.cutoff,
         keep_cnf=args.keep_cnf,
+        live_progress=args.live_progress,
+        progress_interval=args.progress_interval,
     )
     print(json.dumps(res, indent=2))
 

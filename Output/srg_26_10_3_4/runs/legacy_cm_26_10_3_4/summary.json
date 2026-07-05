@@ -1,44 +1,52 @@
 {
   "schema_version": 2,
+  "srg_id": "srg_26_10_3_4",
   "tag": "legacy_cm_26_10_3_4",
-  "source_basename": "cm_26_10_3_4",
+  "engine": "smsg",
   "params": [
     26,
     10,
     3,
     4
   ],
-  "migrated_at": "2026-07-05T16:34:23.051208+00:00",
-  "valid_srgs": 10,
-  "search_complete": true,
-  "artifacts": {
-    "run_dir": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_26_10_3_4/runs/legacy_cm_26_10_3_4",
-    "graphs_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_26_10_3_4/runs/legacy_cm_26_10_3_4/graphs.g6",
-    "graphs_jsonl": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_26_10_3_4/runs/legacy_cm_26_10_3_4/graphs.jsonl",
-    "catalog_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_26_10_3_4/graphs/graphs.g6",
-    "catalog_jsonl": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_26_10_3_4/graphs/graphs.jsonl",
-    "summary_json": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_26_10_3_4/runs/legacy_cm_26_10_3_4/summary.json"
+  "started_at": "2026-07-05T17:29:52.562483+00:00",
+  "finished_at": "2026-07-05T17:30:28.543728+00:00",
+  "encode": {
+    "vertices": 26,
+    "edge_vars": 325,
+    "total_vars": 218725,
+    "clauses": 452673,
+    "initial_partition": "26"
   },
-  "original_summary": {
-    "tag": "cm_26_10_3_4",
-    "engine": "smsg",
-    "params": [
-      26,
-      10,
-      3,
-      4
-    ],
-    "encode": {
-      "vertices": 26,
-      "edge_vars": 325,
-      "total_vars": 218725,
-      "clauses": 452673,
-      "initial_partition": "26"
-    },
-    "raw_models": 10,
-    "non_isomorphic": 10,
-    "valid_srgs": 10,
-    "seconds": 36.833,
-    "output_g6": "Output/cm_26_10_3_4.g6"
-  }
+  "raw_models": 10,
+  "backend_reported_models": 10,
+  "non_isomorphic": 10,
+  "valid_srgs": 10,
+  "seconds": 35.981,
+  "search_complete": true,
+  "limiting_reason": [],
+  "backend": {
+    "requested": "auto",
+    "selected": "smsg",
+    "completed": true,
+    "timed_out": false
+  },
+  "constraints": {
+    "fix_clique": 0,
+    "forbid_clique": null,
+    "forbid_independent": null,
+    "limit": null,
+    "timeout": null
+  },
+  "artifacts": {
+    "run_dir": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/srgenum/Output/srg_26_10_3_4/runs/legacy_cm_26_10_3_4",
+    "graphs_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/srgenum/Output/srg_26_10_3_4/runs/legacy_cm_26_10_3_4/graphs.g6",
+    "graphs_jsonl": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/srgenum/Output/srg_26_10_3_4/runs/legacy_cm_26_10_3_4/graphs.jsonl",
+    "formula_cnf": null,
+    "catalog_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/srgenum/Output/srg_26_10_3_4/graphs/graphs.g6",
+    "catalog_jsonl": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/srgenum/Output/srg_26_10_3_4/graphs/graphs.jsonl",
+    "summary_json": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/srgenum/Output/srg_26_10_3_4/runs/legacy_cm_26_10_3_4/summary.json"
+  },
+  "output_g6": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/srgenum/Output/srg_26_10_3_4/runs/legacy_cm_26_10_3_4/graphs.g6",
+  "output_jsonl": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/srgenum/Output/srg_26_10_3_4/runs/legacy_cm_26_10_3_4/graphs.jsonl"
 }

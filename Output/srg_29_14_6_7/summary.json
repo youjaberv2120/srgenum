@@ -7,7 +7,17 @@
     6,
     7
   ],
-  "runs": {},
+  "runs": {
+    "full_smsg": {
+      "tag": "full_smsg",
+      "engine": "smsg",
+      "run_dir": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/srgenum/Output/srg_29_14_6_7/runs/full_smsg",
+      "search_complete": true,
+      "valid_srgs": 41,
+      "seconds": 9397.487,
+      "summary_json": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/srgenum/Output/srg_29_14_6_7/runs/full_smsg/summary.json"
+    }
+  },
   "campaigns": {
     "rehearsal29": {
       "tag": "rehearsal29",
@@ -27,9 +37,9 @@
     }
   },
   "graph_catalog": {
-    "g6_path": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_29_14_6_7/graphs/graphs.g6",
-    "jsonl_path": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/Multi_Stage_Enumeration/output/srg_29_14_6_7/graphs/graphs.jsonl",
-    "total_graphs": 18
+    "g6_path": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/srgenum/Output/srg_29_14_6_7/graphs/graphs.g6",
+    "jsonl_path": "/Users/youja/Library/CloudStorage/OneDrive-Personal/Documents/Uni/Cadical/srgenum/Output/srg_29_14_6_7/graphs/graphs.jsonl",
+    "total_graphs": 41
   },
-  "updated_at": "2026-07-05T16:34:23.080237+00:00"
+  "updated_at": "2026-07-05T20:49:44.665417+00:00"
 }
