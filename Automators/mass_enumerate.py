@@ -49,7 +49,8 @@ for _p in (_ROOT, os.path.join(_ROOT, "ProgramFiles")):
 
 import sat_backend as sb  # noqa: E402
 import iso  # noqa: E402
-from srg_encoder import CNFBuilder, add_srg_constraints, SRGSpec  # noqa: E402
+from srg_encoder import CNFBuilder, add_srg_constraints, SRGSpec, make_spec  # noqa: E402
+import properties  # noqa: E402
 from output_layout import (  # noqa: E402
     campaign_dir as campaign_path_for_spec,
     discover_campaign_dirs,
@@ -116,6 +117,9 @@ class Campaign:
         campaign_tag=None,
     ):
         os.makedirs(self.shards, exist_ok=True)
+        properties.validate_srg_parameters(
+            spec.V, spec.degree, spec.lam, spec.mu
+        )
         self.log(f"encoding CNF for SRG{spec}")
         builder = CNFBuilder(spec.V)
         meta = add_srg_constraints(builder, spec, **encoder_opts)
@@ -397,7 +401,7 @@ def main():
     has_any_params = any(x is not None for x in (args.v, args.k, args.lam, args.mu))
     if has_any_params and not has_all_params:
         raise ValueError("Specify all of --v/--k/--lam/--mu, or none of them.")
-    spec = SRGSpec(args.v, args.k, args.lam, args.mu) if has_all_params else None
+    spec = make_spec(args.v, args.k, args.lam, args.mu) if has_all_params else None
 
     if args.resume:
         if spec is not None:

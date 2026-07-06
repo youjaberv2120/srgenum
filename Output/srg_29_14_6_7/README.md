@@ -1,43 +1,37 @@
 # SRG(29, 14, 6, 7) — status
 
 The known non-isomorphic count for these parameters is **41** (Brouwer's
-tables, conference graph on 29 vertices).
+tables, conference graph on 29 vertices). This directory now holds a
+**complete** enumeration.
 
-## What is stored here right now
+## What is stored here
 
-* `graphs/graphs.g6`, `graphs/graphs.jsonl` — 18 canonical graphs recovered
-  from the legacy cube-and-conquer campaign `rehearsal29` (see
-  `campaigns/rehearsal29/`). This is a *partial* set: the aggressive
-  cube-cutoff used for that rehearsal missed graphs living in cubes that were
-  either merged coarsely or where the shard was dropped before the merge.
-
-* `campaigns/rehearsal29/` — completed campaign (`search_complete: true`)
-  with `distinct_graphs: 18`. Useful for reproducing that specific decomposition.
+* `graphs/graphs.g6`, `graphs/graphs.jsonl` — **41** canonical graphs (from
+  the authoritative `runs/full_smsg` enumeration).
+* `runs/full_smsg/` — complete plain-`smsg` run (`search_complete: true`,
+  9397 s, 41 graphs). Includes `summary.json`, graph artifacts, and
+  `formula.cnf` (when run with `--keep-cnf`).
+* `campaigns/rehearsal29/` — completed cube-and-conquer campaign
+  (`search_complete: true`) with **18** graphs. Partial subset kept for
+  provenance / decomposition replay.
 * `campaigns/rehearsal29b/` — abandoned campaign (`search_complete: false`,
   6 cubes timed out, 0 graphs recovered). Kept for provenance only.
-* `runs/full_smsg/` — placeholder for the full plain-`smsg` enumeration.
-  Populated once the background job (see below) completes.
 
-## Full enumeration
+## Re-running full enumeration
 
-An in-process plain `smsg` enumeration takes roughly **~2.5 hours**
-(single-threaded; a previous ad-hoc run finished in 8852 s and reported all
-41 graphs, but the run did not persist them). A fresh run was kicked off with:
+Every `enumerate.py` run with the same tag refreshes the whole SRG directory
+layout for that run:
 
 ```bash
-nohup .venv/bin/python Automators/enumerate.py \
-    --v 29 --k 14 --lam 6 --mu 7 --backend smsg \
-    --tag full_smsg --keep-cnf --out output \
-    > Output/_srg29_full.log 2>&1 &
+python -u Automators/enumerate.py --v 29 --k 14 --lam 6 --mu 7 \
+    --backend smsg --tag full_smsg --keep-cnf --out Output \
+    --live-progress --progress-interval 10
 ```
 
-When it finishes, it will write:
+That updates:
 
-* `runs/full_smsg/graphs.g6` + `graphs.jsonl` — all 41 graphs
-* `runs/full_smsg/summary.json` — full run metadata
-* An updated `../graphs/graphs.g6` + `graphs.jsonl` catalog (auto-merged via
-  `output_layout.upsert_srg_catalog`)
-* An updated `../summary.json` (auto-merged)
-
-After completion, rerun `scripts/mirror_to_srgenum.sh` to sync the new files
-into the sibling `srgenum/` clone and push.
+* `runs/full_smsg/graphs.{g6,jsonl}`
+* `runs/full_smsg/summary.json`
+* `runs/full_smsg/formula.cnf` (with `--keep-cnf`)
+* `graphs/graphs.{g6,jsonl}` (catalog replaced on complete unconstrained runs)
+* `summary.json` (top-level SRG index)

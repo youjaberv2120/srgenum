@@ -51,6 +51,14 @@ class SRGSpec(NamedTuple):
 SRG_37 = SRGSpec(37, 18, 8, 9)
 
 
+def make_spec(v: int, k: int, lam: int, mu: int) -> SRGSpec:
+    """Build an :class:`SRGSpec` after basic parameter-algebra checks."""
+    from properties import validate_srg_parameters
+
+    validate_srg_parameters(v, k, lam, mu)
+    return SRGSpec(v, k, lam, mu)
+
+
 class CNFBuilder:
     """Minimal engine-agnostic CNF accumulator.
 

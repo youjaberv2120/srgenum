@@ -20,6 +20,88 @@ Matrix = Sequence[Sequence[int]]
 
 
 # --------------------------------------------------------------------------- #
+# Parameter algebra (necessary, not sufficient — catches typos early)            #
+# --------------------------------------------------------------------------- #
+def validate_srg_parameters(v: int, k: int, lam: int, mu: int) -> None:
+    """Check basic algebraic necessary conditions on SRG(v, k, lam, mu).
+
+    These are **not** sufficient for existence, but reject most typos before
+    a long encode/enumerate run.  Raises :class:`ValueError` on failure.
+    """
+    errors: List[str] = []
+
+    if v < 3:
+        errors.append(f"v={v}: need at least 3 vertices")
+    for name, val in (("k", k), ("lam", lam), ("mu", mu)):
+        if val < 0:
+            errors.append(f"{name}={val}: must be non-negative")
+    if k >= v:
+        errors.append(f"k={k} must satisfy k < v={v}")
+    if lam > k:
+        errors.append(f"lam={lam} must satisfy lam <= k={k}")
+    if mu > k:
+        errors.append(f"mu={mu} must satisfy mu <= k={k}")
+
+    if (v * k) % 2:
+        errors.append(f"v*k={v * k} must be even (handshaking lemma)")
+    if (v * k * (k - 1)) % 2:
+        errors.append(f"v*k*(k-1) must be even")
+
+    lhs = k * (k - 1 - lam)
+    rhs = mu * (v - k - 1)
+    if lhs != rhs:
+        errors.append(
+            f"counting identity: k(k-1-lam)={lhs} != mu(v-k-1)={rhs}"
+        )
+
+    k_bar = v - k - 1
+    lam_bar = v - 2 - 2 * k + mu
+    mu_bar = v - 2 * k + lam
+    if k_bar >= 0 and lam_bar >= 0 and mu_bar >= 0:
+        lhs_c = k_bar * (k_bar - 1 - lam_bar)
+        rhs_c = mu_bar * (v - k_bar - 1)
+        if lhs_c != rhs_c:
+            errors.append(
+                "complement counting identity failed for "
+                f"(k'={k_bar}, lam'={lam_bar}, mu'={mu_bar}): "
+                f"k'(k'-1-lam')={lhs_c} != mu'(v-k'-1)={rhs_c}"
+            )
+
+    disc = (lam - mu) ** 2 + 4 * (k - mu)
+    if disc < 0:
+        errors.append(
+            f"eigenvalue discriminant (lam-mu)^2+4(k-mu)={disc} is negative"
+        )
+    else:
+        _, r, s = eigenvalues(v, k, lam, mu)
+        if abs(r - s) < 1e-12:
+            if (v - 1) % 2:
+                errors.append(
+                    f"discriminant zero requires v-1={v - 1} to be even "
+                    "for integer eigenvalue multiplicities"
+                )
+        else:
+            f = (-(v - 1) * s - k) / (r - s)
+            g = (v - 1) - f
+            for name, mult in (("f", f), ("g", g)):
+                if mult < -1e-9:
+                    errors.append(
+                        f"eigenvalue multiplicity {name}={mult:.6f} is negative"
+                    )
+                elif abs(mult - round(mult)) > 1e-6:
+                    errors.append(
+                        f"eigenvalue multiplicity {name}={mult:.6f} "
+                        "is not an integer"
+                    )
+
+    if errors:
+        raise ValueError(
+            "SRG parameter checks failed for "
+            f"SRG({v},{k},{lam},{mu}):\n  - " + "\n  - ".join(errors)
+        )
+
+
+# --------------------------------------------------------------------------- #
 # Basic SRG verification                                                        #
 # --------------------------------------------------------------------------- #
 def verify_srg(matrix: Matrix, v: int, k: int, lam: int, mu: int) -> Dict[str, object]:

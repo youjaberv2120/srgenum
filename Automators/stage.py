@@ -37,7 +37,7 @@ for _p in (_ROOT, os.path.join(_ROOT, "ProgramFiles"), _HERE):
     if _p not in sys.path:
         sys.path.insert(0, _p)
 
-from srg_encoder import SRGSpec  # noqa: E402
+from srg_encoder import SRGSpec, make_spec  # noqa: E402
 import iso  # noqa: E402
 from enumerate import run_enumeration  # noqa: E402
 from output_layout import (  # noqa: E402
@@ -150,7 +150,7 @@ def main():
     ap.add_argument("--tag", default="staged")
     args = ap.parse_args()
 
-    spec = SRGSpec(args.v, args.k, args.lam, args.mu)
+    spec = make_spec(args.v, args.k, args.lam, args.mu)
     anchors = tuple(int(x) for x in args.anchors.split(","))
     summary = run_staged(
         spec, anchors,

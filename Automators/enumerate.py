@@ -36,18 +36,17 @@ for _p in (_ROOT, os.path.join(_ROOT, "ProgramFiles")):
     if _p not in sys.path:
         sys.path.insert(0, _p)
 
-from srg_encoder import CNFBuilder, add_srg_constraints, SRGSpec  # noqa: E402
+from srg_encoder import CNFBuilder, add_srg_constraints, SRGSpec, make_spec  # noqa: E402
 import sat_backend  # noqa: E402
 import iso  # noqa: E402
 import properties  # noqa: E402
 from output_layout import (  # noqa: E402
+    is_authoritative_full_enum,
+    publish_run_artifacts,
     resolve_output_root,
     run_dir,
     srg_id,
-    update_srg_summary,
-    upsert_srg_catalog,
     utc_now_iso,
-    write_graph_artifacts,
 )
 from Utilities.graphReader import get_graph  # noqa: E402
 
@@ -75,6 +74,8 @@ def run_enumeration(
     live_progress: bool = False,
     progress_interval: float = 10.0,
 ):
+    properties.validate_srg_parameters(spec.V, spec.degree, spec.lam, spec.mu)
+
     output_root = resolve_output_root(_ROOT, out_dir)
     out_dir = run_dir(spec, output_root, tag)
     os.makedirs(out_dir, exist_ok=True)
@@ -135,12 +136,6 @@ def run_enumeration(
             valid.append(m)
 
     valid_g6 = [iso.matrix_to_graph6(m) for m in valid]
-    g6_path = os.path.join(out_dir, "graphs.g6")
-    jsonl_path = os.path.join(out_dir, "graphs.jsonl")
-    write_graph_artifacts(valid_g6, g6_path, jsonl_path, source="run", tag=tag)
-    catalog = upsert_srg_catalog(
-        spec, output_root, valid_g6, source="run", tag=tag
-    )
 
     ended_at = utc_now_iso()
     elapsed = round(time.time() - t0, 3)
@@ -150,6 +145,14 @@ def run_enumeration(
         limiting_reason.append("limit")
     if use_smsg and timeout is not None and backend_timed_out:
         limiting_reason.append("timeout")
+
+    authoritative = is_authoritative_full_enum(
+        search_complete=search_complete,
+        fix_clique=fix_clique,
+        forbid_clique=forbid_clique,
+        forbid_independent=forbid_independent,
+        limit=limit,
+    )
 
     result = {
         "schema_version": 2,
@@ -181,33 +184,23 @@ def run_enumeration(
             "timeout": timeout,
         },
         "artifacts": {
-            "run_dir": out_dir,
-            "graphs_g6": g6_path,
-            "graphs_jsonl": jsonl_path,
             "formula_cnf": dimacs,
-            "catalog_g6": catalog["catalog_g6"],
-            "catalog_jsonl": catalog["catalog_jsonl"],
         },
-        "output_g6": g6_path,
-        "output_jsonl": jsonl_path,
     }
-    summary_path = os.path.join(out_dir, "summary.json")
-    result["artifacts"]["summary_json"] = summary_path
-    with open(summary_path, "w") as fh:
-        json.dump(result, fh, indent=2)
-    update_srg_summary(
+    published = publish_run_artifacts(
         spec,
         output_root,
-        run_entry={
-            "tag": tag,
-            "engine": engine,
-            "run_dir": out_dir,
-            "search_complete": search_complete,
-            "valid_srgs": len(valid),
-            "seconds": elapsed,
-            "summary_json": summary_path,
-        },
+        tag=tag,
+        run_dir_path=out_dir,
+        graph6_lines=valid_g6,
+        summary=result,
+        source="run",
+        search_complete=search_complete,
+        authoritative_full_enum=authoritative,
     )
+    result["artifacts"].update(published)
+    result["output_g6"] = published["run_g6"]
+    result["output_jsonl"] = published["run_jsonl"]
     return result
 
 
@@ -241,7 +234,7 @@ def main():
                     help="seconds between live timer updates")
     args = ap.parse_args()
 
-    spec = SRGSpec(args.v, args.k, args.lam, args.mu)
+    spec = make_spec(args.v, args.k, args.lam, args.mu)
     seed = _seed_from_file(args.seed) if args.seed else None
     res = run_enumeration(
         spec,
